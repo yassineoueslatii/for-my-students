@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="articleDao" class="com.yassine.DAO.Impl.ArticleDaoImpl"></bean>	
+	<bean id="articleService" class="com.yassine.SERVICE.Impl.ArticleServiceImpl">
+	<property name="dao" ref="articleDao"></property>
+	
+	</bean>
+	<bean id="categoryDao" class="com.yassine.DAO.Impl.GategoryDaoImpl"></bean>	
+	<bean id="categoryService" class="com.yassine.SERVICE.Impl.CategoryServiceImpl">
+	<property name="dao" ref="categoryDao"></property>
+	
+	</bean>
+	
+		</beans>
+		
+	
