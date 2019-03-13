@@ -75,4 +75,7 @@ public class ArticleServiceImpl  implements IArticleService {
 		return dao.findCountBy(parName, paramValue);
 	}
 
+	
+	
+
 }

@@ -14,6 +14,32 @@
 	
 	</bean>
 	
+	
+	<bean id="commandeDao" class="com.yassine.DAO.Impl.CommandeDaoImlp"></bean>	
+	<bean id="commandeService" class="com.yassine.SERVICE.Impl.CommandeServiceImpl">
+	<property name="dao" ref="commandeDao"></property>
+	
+	</bean>
+	
+	<bean id="ligneCommandeDao" class="com.yassine.DAO.Impl.LigneCommandeDaoImpl"></bean>	
+	<bean id="ligneCommandeService" class="com.yassine.SERVICE.Impl.LigneCommandeServiceImpl">
+	<property name="dao" ref="ligneCommandeDao"></property>
+	
+	</bean>
+	
+	
+	<bean id="produitDao" class="com.yassine.DAO.Impl.ProduitDaoImpl"></bean>	
+	<bean id="produitService" class="com.yassine.SERVICE.Impl.ProduitServiceImpl">
+	<property name="dao" ref="produitDao"></property>
+	
+	</bean>
+	<bean id="mvtStockDao" class="com.yassine.DAO.Impl.MvtStockDaoImpl"></bean>	
+	<bean id="mvtStockService" class="com.yassine.SERVICE.Impl.MvtStockServiceImpl">
+	<property name="dao" ref="mvtStockDao"></property>
+	
+	</bean>
+	
+	
 		</beans>
 		
 	

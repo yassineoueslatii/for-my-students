@@ -7,7 +7,15 @@
 
 <s:http auto-config="true">
 	<s:intercept-url pattern="/article/" access="ROLE_ADMIN, ROLE_USER" />
+	<s:intercept-url pattern="/produit/**" access="ROLE_ADMIN, ROLE_USER" />
+	<s:intercept-url pattern="/commande/" access="ROLE_ADMIN, ROLE_USER" />
 	<s:intercept-url pattern="/article/**" access="ROLE_ADMIN" />
+	<s:intercept-url pattern="/index" access="ROLE_ADMIN" />
+	<s:intercept-url pattern="/getlignescommande/**" access="ROLE_ADMIN, ROLE_USER" />
+	
+	<s:intercept-url pattern="/username" access="ROLE_ADMIN, ROLE_USER" />
+	
+	
 	<s:form-login login-page="/" authentication-failure-url="/failedlogin" default-target-url="/home/" />
 	<s:access-denied-handler error-page="/403/" />
 	<s:logout logout-success-url="/logout" delete-cookies="JSESSIONID"/>

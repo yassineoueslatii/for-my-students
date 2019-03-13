@@ -3,6 +3,7 @@ package com.yassine.SERVICE;
 import java.util.List;
 
 import com.yassine.entities.Article;
+import com.yassine.entities.Commande;
 
 public interface IArticleService {
 	
@@ -15,6 +16,8 @@ public interface IArticleService {
 		public Article findOne(String parName,String paramValue );
 		public Article findOne(String[] paraNames,String[] paramValues );
 		public int findCountBy(String parName,String paramValue );
+		
+	
 	
 
 }

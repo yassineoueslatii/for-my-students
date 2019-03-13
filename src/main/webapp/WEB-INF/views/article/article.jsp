@@ -1,4 +1,12 @@
-<%@ include file="/WEB-INF/views/includes/include.jsp" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
+<%@ page session="true" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ page session="true" %>
+<%@ page trimDirectiveWhitespaces="true" %>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,8 +52,7 @@
     <div id="wrapper">
 		<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
        
-		<%@ include file="/WEB-INF/views/menu_top/top.jsp" %>
-		<%@ include file="/WEB-INF/views/menu_left/left.jsp" %>
+		
             
            
         </nav>
@@ -59,9 +66,10 @@
                 <br />
                 <nav aria-label="breadcrumb">
 			    <ol class="breadcrumb">
-			    <c:url value="/client/nouveau" var="nouveau" />
+			    <c:url value="/article/nouveau" var="nouveau" />
+			    <c:url value="/article/export" var="export" />
 			     <li class="breadcrumb-item"><a href="${nouveau}"><i class="fa fa-plus">Nouveau</i></a></li>
-			     <li class="breadcrumb-item"><a href="#"><i class="fa fa-download "><fmt:message key="common.exporter" /></i></a></li>
+			     <li class="breadcrumb-item"><a href="${export }"><i class="fa fa-download ">Exporter</i></a></li>
 			     <li class="breadcrumb-item"><a href="#"><i class="fa fa-upload"><fmt:message key="common.importer" /></i></a></li>
 			    
 			
